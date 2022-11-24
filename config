@@ -116,8 +116,8 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
+set $ws1 "1: Terminal"
+set $ws2 "2: Browse"
 set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
@@ -202,3 +202,12 @@ exec "setxkbmap -layout de"
 
 # Display Wallpaper
 exec_always feh --bg-fill /home/tim/DesktopUtilities/wallpaper.jpg
+
+# Keybinding for i3lock
+bindsym $mod+x exec i3lock
+
+# Assign Programs to Workspaces
+# -> terminology
+for_window [class="terminology"] move to workspace $ws1
+# -> firefox
+for_window [class="firefox"] move to workspace $ws2
