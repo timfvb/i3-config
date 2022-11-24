@@ -192,7 +192,9 @@ bar {
 }
 
 # Monitor Settings
-# -> Set Primary to 144.00 hz
+# -> Define Primary Screen
+exec "xrandr --output DP-1 --primary"
+# -> Set DP-1 to 144.00 hz
 exec "xrandr --output DP-1 --mode 1920x1080 --rate 144.00"
 
 # Define Keyboard Layout
